@@ -78,5 +78,3 @@ public class principal extends JFrame {
 		
 	}
 }
-
-//testando
