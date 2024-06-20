@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import controller.Criptografia;
+
 import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -76,6 +79,8 @@ public class login extends JFrame {
 		btnEntrarLogin.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btnEntrarLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Criptografia criptografia = new Criptografia(UserPassword.getText(), Criptografia.MD5);
+				System.out.println(criptografia.criptografar());
 				//codigo abaixo validação para login e senha não ficar em branco
 				if (UserLogin.getText()!=null &&
 						!UserLogin.getText().isEmpty() && 
