@@ -26,4 +26,4 @@ Este projeto foi desenvolvido utilizando Java 22 para criar uma aplicação desk
 
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/usuario/nome-do-repositorio.git
+   git clone [https://github.com/guilhermeeneto/ProgramaClientes.java]
