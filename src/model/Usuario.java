@@ -5,6 +5,13 @@ public class Usuario {
 	private String nome;
 	private String senha;
 	
+	public Usuario(int id, String nome, String senha) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.senha = senha;
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -29,11 +36,6 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-	public Usuario(int id, String nome, String senha) {
-		super();
-		this.id = id;
-		this.nome = nome;
-		this.senha = senha;
-	}
+	
 
 }

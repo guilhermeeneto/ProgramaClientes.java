@@ -17,12 +17,12 @@ public class DAO {
 	private static ResultSet resultSet = null;
 
 	private static String CADASTRAR_CLIENTE = " INSERT INTO CLIENTE  "
-			+ " (ID, NOME, CPFCNPJ, EMAIL, TELEFONE, ENDERECO) " + " VALUES (NULL, ?, ?, ?, ?, ?) ";
+			+ " (ID, NOME, CPF, EMAIL, TELEFONE, ENDERECO) " + " VALUES (NULL, ?, ?, ?, ?, ?) ";
 
 	private static String CONSULTAR_CLIENTE = " SELECT * FROM CLIENTE  " + " WHERE ID = ? ";
 
 	private static String ALTERAR_CLIENTE = " UPDATE CLIENTE  SET "
-			+ " NOME = ?, CPFCNPJ = ?, EMAIL = ?, TELEFONE = ?, ENDERECO = ? " + " WHERE ID = ? ";
+			+ " NOME = ?, CPF = ?, EMAIL = ?, TELEFONE = ?, ENDERECO = ? " + " WHERE ID = ? ";
 
 	private static String EXCLUIR_CLIENTE = " DELETE FROM CLIENTE  " + " WHERE ID = ? ";
 
@@ -80,8 +80,8 @@ public class DAO {
 			while (resultSet.next()) {
 				//String id, String nome, String cpfCnpj, String email, String telefone, String endereco
 				cliente  = new Cliente(	resultSet.getString("ID"),
-										resultSet.getString("nome"),
 										resultSet.getString("CPF"),
+										resultSet.getString("NOME"),
 										resultSet.getString("EMAIL"),
 										resultSet.getString("TELEFONE"),
 										resultSet.getString("ENDERECO"));
@@ -167,8 +167,8 @@ public class DAO {
 			while (resultSet.next()) {
 				//String id, String nome, String cpfCnpj, String email, String telefone, String endereco
 				clientes.add( new Cliente(	resultSet.getString("ID"),
-										resultSet.getString("nome"),
 										resultSet.getString("CPF"),
+										resultSet.getString("NOME"),
 										resultSet.getString("EMAIL"),
 										resultSet.getString("TELEFONE"),
 										resultSet.getString("ENDERECO")));
