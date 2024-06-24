@@ -86,6 +86,14 @@ public class login extends JFrame {
 						!UserLogin.getText().isEmpty() && 
 						UserPassword.getText()!=null &&
 						!UserPassword.getText().isEmpty()) {
+					if(criptografia.criptografar().equals("202CB962AC59075B964B07152D234B70")) {
+					dispose();
+					principal Principal = new principal();
+					Principal.setLocationRelativeTo(Principal);
+					Principal.setVisible(true);
+					
+							
+					}
 				} else {
 					JOptionPane.showMessageDialog(UserLogin, "Login e/ou senha inválidos.", "Aviso", JOptionPane.WARNING_MESSAGE);
 				}
@@ -110,7 +118,7 @@ public class login extends JFrame {
 		lblNewLabel_1.setBounds(151, 121, 66, 13);
 		panel.add(lblNewLabel_1);
 		
-		lblNewLabel_2 = new JLabel("Sistema de Exames - Núcleo Digestivo");
+		lblNewLabel_2 = new JLabel("Sistema de teste");
 		lblNewLabel_2.setForeground(Color.BLACK);
 		lblNewLabel_2.setFont(new Font("Arial Black", Font.BOLD, 17));
 		lblNewLabel_2.setBounds(10, 10, 396, 40);
