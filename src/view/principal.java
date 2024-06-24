@@ -16,6 +16,7 @@ import javax.swing.border.EmptyBorder;
 
 import model.Cliente;
 import model.ModeloTabela;
+import dao.DAO;
 
 public class principal extends JFrame {
 
@@ -46,7 +47,13 @@ public class principal extends JFrame {
 	 */
 	public principal() {
 		clientes = new ArrayList<>();
-		clientes.add(new Cliente ("1", "Joao", "joao@email.com", "123.123.123.-92", "313123123131", "não informado" ));
+		DAO dao = new DAO();
+		try {
+			clientes = dao.listarClientes();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1278, 767);
 		contentPane = new JPanel();
